@@ -1,3 +1,0 @@
-<zk apply="practice.AjaxController">
-			<include id="masterpg" src="/master1.zul" />		
-</zk>
