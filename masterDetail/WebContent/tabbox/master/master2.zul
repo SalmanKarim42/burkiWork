@@ -1,0 +1,31 @@
+<zk apply="demo.getting_started.mvc.SearchController">
+<div id="form" visible="false">
+			<grid>
+				<columns>
+					<column hflex="min" />
+					<column />
+					<column hflex="min" />
+					<column />
+				</columns>
+				<rows>
+					<row>
+						<label value="ID" />
+						<textbox />
+						<label value="Name" />
+						<textbox />
+					</row>
+					<row>
+						<label value="Email" />
+						<textbox />
+						<label value="Phone" />
+						<textbox />
+					</row>
+					<row>
+						<label value="" />
+						<button label="Submit"></button>
+					</row>
+				</rows>
+			</grid>
+
+		</div>
+		</zk>

@@ -1,0 +1,22 @@
+<grid id="grid" mold="paging" pageSize="4">
+	<columns>
+		<column hflex="1" label="Email" align="left" />
+		<column hflex="2" label="password" align="center" />
+		<column hflex="3" label="Purchased Time" align="center" />
+		<column hflex="1" label="Paid" align="right" />
+	</columns>
+	<rows>
+	<row>
+		<label />
+		<listbox mold="select">
+			<listitem label="Java" />
+			<listitem label="Latte" />
+			<listitem label="Mocha" />
+		</listbox>
+		<timebox cols="12" format="a hh:mm:ss" mold="rounded"
+			onCreate="self.value = new Date()" />
+		<checkbox label="No"
+			onCheck='self.label= self.isChecked()? "Yes" : "No"' />
+	</row>
+	</rows>
+</grid>

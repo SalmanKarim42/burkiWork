@@ -1,0 +1,142 @@
+<?page title="User Registration"?>
+<zk apply="demo.getting_started.mvc.SearchController">
+	 
+	<style>        .grid {             }       </style>
+
+
+	<tabbox id="tb" width="100%" mold="accordion">
+		<tabs>
+			<tab label="Master" id="master">
+
+				<caption label="">
+
+					<label>Master</label>
+					<button width="" id="masterclick" label="Insert"
+						mold="os" />
+				</caption>
+
+
+
+			</tab>
+		</tabs>
+		<!--<tabs>
+			<tab></tab>
+			</tabs>-->
+		<tabpanels>
+			<tabpanel>
+				<div
+					apply="demo.getting_started.mvc.SearchController">
+					<div id="main">
+						<hbox align="center">
+							Keyword:
+							<textbox id="keywordBox" />
+							<button id="searchButton" label="Search"
+								image="/widgets/getting_started/img/search.png" />
+						</hbox>
+						<div align="center" style="padding:5px;">
+							<label style="font-size:2em;">
+								Master Table
+							</label>
+							<listbox id="userListbox" width="100%"
+								emptyMessage="No user found in the result" height="160px">
+								<listhead>
+									<listheader label="ID" width="30%" />
+									<listheader label="Name" />
+								</listhead>
+								<template name="model">
+									<listitem>
+										<listcell label="${each.id}"></listcell>
+										<listcell
+											label="${each.name}">
+										</listcell>
+									</listitem>
+								</template>
+							</listbox>
+						</div>
+						<hbox id="detailBox" visible="false">
+							<div align="center" style="padding:5px;">
+								<label style="font-size:2em;">
+									Detail Table
+								</label>
+
+								<listbox id="detailListbox" width="100%"
+									emptyMessage="No user found in the result" height="160px">
+									<listhead>
+										<listheader label="Email" />
+										<listheader label="Phone" />
+									</listhead>
+									<template name="model">
+										<listitem>
+											<listcell
+												label="${each.email}">
+											</listcell>
+											<listcell
+												label="${each.phone}">
+											</listcell>
+										</listitem>
+									</template>
+								</listbox>
+							</div>
+						</hbox>
+					</div>
+					<div id="form" visible="false">
+						<grid>
+							<columns>
+								<column hflex="min" />
+								<column hflex="min" />
+								<column hflex="min" />
+								<column hflex="min" />
+								<column hflex="min" />
+							</columns>
+							<rows>
+								<row>
+									<label value="ID" />
+									<textbox />
+									<label value="Name" />
+									<textbox />
+									<button iconSclass="z-icon-plus" />
+								</row>
+							</rows>
+						</grid>
+						<listbox id="insertdetail" visible="true"
+							emptyMessage="No user found in the result" height="400px">
+							<listhead>
+								<listheader label="Email" />
+								<listheader label="Phone" />
+								<listheader align="right">
+									<button iconSclass="z-icon-plus"
+										style="background:green;" />
+								</listheader>
+							</listhead>
+							<!--<template name="model"> -->
+								<listitem>
+									<listcell >
+										<textbox />
+									</listcell>
+									<listcell >
+										<textbox />
+									</listcell>
+									<listcell >
+										<button label="Edit"/>
+									</listcell>
+								</listitem>
+							<!-- </template> -->
+							<listfoot>
+								<listfooter />
+								<listfooter />
+								<listfooter>
+									<button label="Insert in DB" />
+								</listfooter>
+							</listfoot>
+						</listbox>
+
+					</div>
+				</div>
+
+			</tabpanel>
+
+		</tabpanels>
+	</tabbox>
+
+
+</zk>

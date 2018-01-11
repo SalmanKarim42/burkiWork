@@ -1,0 +1,22 @@
+.myimg {
+	margin: 5px; border: 1px solid #CFCFCF;
+}
+div.z-row-content span {
+	font-family: Tahoma,Arial,serif;
+	color: #0E3A99;
+}
+.z-row .z-detail-outer {
+    padding: 3px 6px;
+}
+.heavy {
+	font-weight:bold;
+}
+div.z-row-content .rating {
+	font-weight:bold;
+	color: #0093f9;
+}
+
+.details {
+    padding: 5px;
+    line-height: 1.5em;
+}
